@@ -11,8 +11,8 @@ function Footer() {
             <div className='footer'>
 
                 <div className='footer-list list-1'>
-                    <h2  className="logo">Foodie.</h2>
-                    <p>Financial experts support or help you to to find out which way you can raise your funds more.</p>
+                    <h2  className="logo">Kahani Khane Ki</h2>
+                    <p>Humare Har Khane Mein Alag Kahani</p>
                     <div className='icons'>
                         <h2><FaFacebookSquare /></h2>
                         <h2><FaInstagram /></h2>
@@ -23,23 +23,23 @@ function Footer() {
 
                 <div className='footer-list'>
                     <h2>Contact Info</h2>
-                    <p>+92 062 109-9222</p>
-                    <p>Info@YourGmail24.com</p>
-                    <p>153 Williamson Plaza, Maggieberg, MT 09514</p>
+                    <p>+91 1234567890</p>
+                    <p>Info@kahanikhaneki.com</p>
+                    <p>Guwahati</p>
                 </div>
 
                 <div className='footer-list'>
                     <h2>Opening Hours</h2>
-                    <p>Monday-Friday: 08:00-22:00</p>
-                    <p>Tuesday 4PM: Till Mid Night</p>
-                    <p>Saturday: 10:00-16:00</p>
+                    <p>Monday-Friday: 8:00am-10:00pm</p>
+                    <p>Tuesday 8:00am-10:00pm</p>
+                    <p>Saturday: 8:00am-1:00am</p>
                 </div>
 
                 <div className='footer-list'>
                     <h2>Branches </h2>
-                    <p>Monday-Friday: 08:00-22:00</p>
-                    <p>Tuesday 4PM: Till Mid Night</p>
-                    <p>Saturday: 10:00-16:00</p>
+                    <p>Monday-Friday: 8:00am-10:00pm</p>
+                    <p>Tuesday 8:00am-10:00pm</p>
+                    <p>Saturday: 8:00am-1:00am</p>
                 </div>
 
             </div>

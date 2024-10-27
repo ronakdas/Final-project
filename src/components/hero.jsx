@@ -18,9 +18,9 @@ function Hero() {
     return (
         <div className='hero-container' style={containerStyle}>
             <div className='hero-info'>
-                <h6>Eat Sleep And</h6>
-                <h1 className='hero-heading'>Supper delicious Burger in town!</h1>
-                <p className='hero-discription'>Food is any substance consumed to provide nutritional support for an organism.</p>
+                <h6>Har Khane Ki ALag Kahani</h6>
+                <h1 className='hero-heading'>Khane Khane Mein Ghar Ka Swaad!!!</h1>
+                <p className='hero-discription'>A taste of India, served with love...</p>
                 <button className='button'>Order Now</button>
             </div>
             <div  className='burger' style={burgerstyle}>
