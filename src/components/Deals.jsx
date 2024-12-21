@@ -59,7 +59,7 @@ function Deals() {
                     className="deal-img" />
 
                 <div className="banner-item-content">
-                    <h3 className="banner-title">Buzzed Pizza</h3>
+                    <h3 className="banner-title">Traditional Thali</h3>
                     <p className="banner-text">Sale off 50% only this week</p>
                     <Link to="/shop"><button className="button">Order Now</button></Link>
                 </div>

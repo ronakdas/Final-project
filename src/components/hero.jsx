@@ -1,6 +1,6 @@
 import React from 'react'
-import { herobg,herobannerbg, burger6 } from '../assets'
-
+import { herobg,herobannerbg, mc1 } from '../assets'
+import { Link } from 'react-router-dom'
 import './Styles/Hero.css'
 function Hero() {
 
@@ -20,11 +20,11 @@ function Hero() {
             <div className='hero-info'>
                 <h6>Har Khane Ki ALag Kahani</h6>
                 <h1 className='hero-heading'>Khane Khane Mein Ghar Ka Swaad!!!</h1>
-                <p className='hero-discription'>A taste of India, served with love...</p>
-                <button className='button'>Order Now</button>
+                <p className='hero-discription'>A taste of India, served with love....</p>
+                <Link to="/shop"><button className='button'>Order Now</button></Link>
             </div>
             <div  className='burger' style={burgerstyle}>
-                <img  src={burger6} width={550} />
+                <img  src={mc1} width={550} />
             </div>
         </div>
     )

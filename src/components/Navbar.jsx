@@ -1,70 +1,101 @@
 import React, { useState } from 'react';
-import { navLinks } from '../constants';
-import { Link } from 'react-router-dom';
-import {  useRecoilValue } from 'recoil';
-import { CartState } from './Shop';
+import { Link, useMatch, useNavigate } from 'react-router-dom';
+import { useAuth } from '../config/Context'; 
+import './Styles/Navbar.css';
 import { carticon } from '../assets';
-import { FaTimes } from 'react-icons/fa';
-import './Styles/Navbar.css'
-import './Styles/Cart.css'
+import { useRecoilValue } from 'recoil';
+import { CartState } from './Shop';
 import Cart from './Cart';
-
+import { FaTimes } from 'react-icons/fa';
+import { getAuth, signOut } from "firebase/auth"; 
 
 const Navbar = () => {
-    const cart = useRecoilValue(CartState)
-    const [isOpen, setIsOpen] = useState(false);
-    const [isSidebarOpen, setSidebarOpen] = useState(false); 
-
-    const toggleNav = () => {
-        setIsOpen(prevstate => !prevstate);
-    }
+    const { user } = useAuth(); 
+    const navigate = useNavigate();
+    const matchHome = useMatch("/");
+    const matchShop = useMatch("/shop/*");
+    const matchBlogs = useMatch("/blogs/*");
+    const cart = useRecoilValue(CartState);
+    const [isSidebarOpen, setSidebarOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const auth = getAuth(); 
 
     const toggleSidebar = () => {
-        setSidebarOpen(prevState => !prevState);
-    }
+        setSidebarOpen(!isSidebarOpen);
+    };
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const handleSignOut = () => {
+        signOut(auth)
+            .then(() => {
+                console.log("User signed out");
+                navigate('/login'); 
+            })
+            .catch((error) => {
+                console.error("Sign-out error:", error);
+                alert("Sign out failed: " + error.message);
+            });
+    };
 
     return (
         <header>
-        <div className="nav-container container">
-            <h2  className="logo">Kahani Khane Ki.</h2>
-            <div className='nav-container'>
-                <nav className={`site-nav ${isOpen ? 'site-nav--open' : ''}`}>
-                <ul>
-                    {navLinks.map((nav,index)=>(
-                        <li key={nav.id}>
-                                <Link to={nav.link}>
-                                    {nav.title}
-                                </Link>
+            <div className="nav-container">
+                <h2 className="logo">
+                    <Link to="/">Kahani Khane Ki</Link>
+                </h2>
+                <nav className={`site-nav ${isMobileMenuOpen ? 'open' : ''}`}>
+                    <ul>
+                        <li>
+                            <Link to="/" className={matchHome ? "active" : ""}>Home</Link>
                         </li>
-                    ))}
-                </ul>
+                        <li>
+                            <Link to="/shop" className={matchShop ? "active" : ""}>Shop</Link>
+                        </li>
+                        <li>
+                            <Link to="/blogs" className={matchBlogs ? "active" : ""}>Blogs</Link>
+                        </li>
+                        {user ? (
+                            <>
+                                <li>
+                                    <span className="user-greeting">
+                                        {user.displayName ? `Hi, ${user.displayName}` : `Hi, ${user.email?.split("@")[0] || 'User'}`} 
+                                    </span>
+                                </li>
+                                <li>
+                                    <button onClick={handleSignOut} className="signout-button">Sign Out</button>
+                                </li>
+                            </>
+                        ) : (
+                            <li>
+                                <Link to="/signup" className="account-link">Account</Link>
+                            </li>
+                        )}
+                    </ul>
                 </nav>
-                <div>
-                    <div>
-                        <button onClick={toggleSidebar} className='cart-btn'>
-                            <div className='cart'>
-                                <img src={carticon} alt="" width="30px" />
-                                <p className='cart-value'>{Object.keys(cart).length}</p>
-                            </div>
-                        </button>
-                        <aside className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar hide-sidebar'}`}>
-                            <div className='sidebar-header'>
-                                <h1>Cart</h1>
-                                <button className='close-btn' onClick={toggleSidebar}>
-                                    <FaTimes />
-                                </button>
-                            </div>
-                            <Cart />
-                        </aside>
-                    </div>
+                <div className="menu-toggle" onClick={toggleMobileMenu}>
+                    <div className="hamburger"></div>
                 </div>
-
+                <div className="cart-container">
+                    <button onClick={toggleSidebar} className='cart-btn'>
+                        <div className='cart'>
+                            <img src={carticon} alt="Cart" width="30px" />
+                            <p className='cart-value'>{Object.keys(cart).length}</p>
+                        </div>
+                    </button>
+                    <aside className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar hide-sidebar'}`}>
+                        <div className='sidebar-header'>
+                            <h1>Cart</h1>
+                            <button className='close-btn' onClick={toggleSidebar}>
+                                <FaTimes />
+                            </button>
+                        </div>
+                        <Cart />
+                    </aside>
+                </div>
             </div>
-
-            <div className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleNav}>
-            <div className="hamburger"></div>
-            </div>
-        </div>
         </header>
     );
 };

@@ -1,6 +1,5 @@
-# Foodie - Restaurant Web App
+# KahaniKhaneKi - Restaurant Web App
 
-Welcome to Foodie, a dynamic restaurant web app with a variety of features to enhance the user experience. .
 
 ## Features
 
@@ -17,7 +16,7 @@ And much more
 - **Framer Motion**
 - **CSS**
 
-![Foodie](./src/assets/Foodie.png)
+![KahaniKhaneKi](./src/assets/Capture.JPG)
 
 
 

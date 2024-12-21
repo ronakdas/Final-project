@@ -35,24 +35,31 @@ import shapered from './sale-shape-red.png'
 import shape from './sale-shape.png'
 import shapegrey from './shape-grey.png'
 import shapewhite from './shape-white.png'
-import pizza1 from './pizza1.png'
-import pizza2 from './pizza2.png'
-import pizza3 from './pizza3.png'
-import burger1 from './burger1.png'
-import burger2 from './burger2.png'
-import burger3 from './burger3.png'
-import burger4 from './burger4.png'
-import burger5 from './burger5.png'
-import burger6 from './burger6.png'
-import burger7 from './burger7.png'
-import drink1 from './drink1.png'
-import drink2 from './drink2.png'
-import drink3 from './drink3.png'
-import drink4 from './drink4.png'
-import drink5 from './drink5.png'
-import drink6 from './drink6.png'
+import paneer from './paneer.png'
+import st1 from './st1.png'
+import st2 from './st2.png'
+import st3 from './st3.png'
+import st4 from './st4.png'
+import mc1 from './mc1.png'
+import mc2 from './mc2.png'
+import mc3 from './mc3.png'
+import mc4 from './mc4.png'
+import mc5 from './mc5.png'
+import mc6 from './mc6.png'
+import si1 from './si1.png'
+import si2 from './si2.png'
+import si3 from './si3.png'
+import si4 from './si4.jpg'
+import si5 from './si5.jpeg'
+import dessert1 from './dessert1.jpeg'
+import dessert2 from './dessert2.jpg'
+import dessert3 from './dessert3.jpeg'
+import dessert4 from './dessert4.jpeg'
+import drinks1 from './drinks1.jpeg'
+import drinks2 from './drinks2.jpeg'
+import drinks3 from './drinks3.jpeg'
+import drinks4 from './drinks4.jpeg'
 import sandwich1 from './sandwich1.png'
-import sandwich2 from './sandwich2.png'
 import verified from './verified.svg'
 import carticon from './cart.svg'
 import del  from  './del.svg'
@@ -72,9 +79,12 @@ export {
     promo1, promo2, promo3,promo4,promo5,
     picon1,picon2,picon3,picon4,picon5,
     footer,  shape, shapegrey,shapered,shapewhite,
-    pizza1,pizza2,pizza3,
-    burger1,burger2,burger3,burger4,burger5,burger6,burger7,
-    drink1,drink2,drink3,drink4,drink5,drink6,
-    sandwich1,sandwich2,
+    st1,st2,st3,st4,
+    mc1,mc2,mc3,mc4,mc5,mc6,
+    si1,si2,si3,si4,si5,
+    dessert1, dessert2, dessert3, dessert4,
+    drinks1, drinks2, drinks3, drinks4,
+    paneer,
+    sandwich1,
     verified,carticon,del,inc,dec, emptycart,deliverybg
 }

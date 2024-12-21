@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { deliverybg, deliveryboy } from '../assets'
 import './Styles/Delivery.css'
-
+import { Link } from 'react-router-dom'
 function Delivery() {
     const clouds = {
         backgroundImage: `url(${deliverybg})`,
@@ -40,8 +40,10 @@ function Delivery() {
         <div className='delivery-container'>
             <div className='delivery-content'>
                 <h1>A Moments Of Delivered On <span id='span'>Right Time</span>  & Place</h1>
-                <p>The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng during the Jurchen invasion of the 1120s, while it is also known that many restaurants were run by families.</p>
-                <button className='button'>Order Now</button>
+                <p>Indulge in a culinary experience like no other.
+                    Discover the magic of Indian cuisine.
+                    A taste of India, served with love...</p>
+                <Link to="/shop"><button className='button'>Order Now</button></Link>
             </div>
             <div className='delivery-imgs' style={clouds} >
                 <img data-delivery-boy style={{ transform: `translateX(${deliveryBoyMove}px)` }} src={deliveryboy} alt="not found" width="350px" />

@@ -1,4 +1,4 @@
-import { avatar1, avatar2, avatar3, blog1, blog2, blog3, burger1, burger2, burger3, burger4, burger5, burger6, burger7, drink1, drink2, drink3, drink4, picon1, picon2, picon4, picon5, pizza1, pizza2, pizza3, promo1, promo2, promo3, promo4, promo5, sandwich1, sandwich2 } from "../assets";
+import { avatar1, avatar2, avatar3, blog1, blog2, blog3, picon1, picon2, picon4, picon5, promo1, promo2, promo3, promo4, promo5, sandwich1, st1, st2, st3, st4, mc1, mc2, mc3, mc4, mc5,mc6, si1, si2, si3, si4, si5, dessert1, dessert2, dessert3, dessert4, drinks1, drinks2, drinks3, drinks4 } from "../assets";
 
 export const navLinks = [
     {
@@ -8,144 +8,149 @@ export const navLinks = [
     },
     {
         id: "features",
-        title: "Shop",
+        title: "Menu",
         link : './shop'
+    },
+   
+    {
+        id: "clients",
+        title: "Blogs",
+        link : './blogs'
     },
     {
         id: "product",
         title: "Account",
         link : './signup'
     },
-    {
-        id: "clients",
-        title: "Blogs",
-        link : './blogs'
-    },
 ];
 
 export const catagory =[
     {
         id: 1,
-        title: "Soft Drinks",
-        icon: picon2,
-        description: "Its is all about Drinks",
+        title: "Starter",
+        //icon: picon2,
+        description: "Our delectable appetizers",
         img: promo2
     },
     {
         id: 2,
-        title: "Sandwich",
-        icon: picon5,
-        description: "Its is all about Meat",
+        title: "Main Course",
+        //icon: picon5,
+        description: "Our Exquisite Main Courses",
         img: promo3
     },
     {
         id: 3,
-        title: "Burger",
-        icon: picon4,
-        description: "Its is all about Burgers",
+        title: "Sides",
+        //icon: picon4,
+        description: "Our Exquisite Main Courses",
         img: promo4
     },
     {
         id: 4,
-        title: "Pizza",
-        icon: picon1,
-        description: "Its is all about Pizza",
+        title: "Desserts",
+        //icon: picon1,
+        description: "Indulge Your Sweet Tooth",
         img: promo5,
     },
     {
         id: 4,
-        title: "Pizza",
-        icon: picon5,
-        description: "Its is all about Pizza",
+        title: "Drinks",
+        //icon: picon2,
+        description: "Quench Your Thirst",
         img: promo1
     }
 ]
 export const food =[
+    //main course starts here?
     {
         id:0,
-        Name: "Burger",
-        pic : burger1,
-        catagory : "Burger",
-        Price : 60,
+        Name: "Biriyani",
+        pic : mc1,
+        catagory : "mc",
+        Price : 360,
         discount : 10,
-        O_price: 80,
+        O_price: 400,
         clicked: false
     },
     {
         id:1,
-        Name: "Pizza",
-        pic : pizza1,
-        catagory : "Pizza",
-        Price : 60,
+        Name: "Paneer Butter Masala",
+        pic : mc2,
+        catagory : "mc",
+        Price : 260,
         discount : 10,
-        O_price: 80,
+        O_price: 300,
         clicked: false
     },
     {
         id:2,
-        Name: "Burger",
-        pic : burger2,
-        catagory : "Burger",
-        Price : 50,
+        Name: "Chicken 65",
+        pic : mc3,
+        catagory : "mc",
+        Price : 300,
         discount : 20,
         O_price: 80,
         clicked: false
     },
     {
         id:3,
-        Name: "Coca Cola",
-        pic : drink2,
-        catagory : "Drink",
-        Price : 25,
+        Name: "Chik-Pea Tikka Masala",
+        pic : mc4,
+        catagory : "mc",
+        Price : 198,
         discount : 10,
-        O_price: 80,
+        O_price: 200,
         clicked: false
     },
     {
         id:4,
-        Name: "Burger",
-        pic : burger5,
-        catagory : "Burger",
-        Price : 50,
+        Name: "Saag Paneer",
+        pic : mc5,
+        catagory : "mc",
+        Price : 315,
         discount : 10,
-        O_price: 80,
+        O_price: 350,
         clicked: false
     },
     {
         id:5,
-        Name: "Sandwich",
-        pic : sandwich2,
-        catagory : "Sandwich",
-        Price : 60,
+        Name: "Fish Curry",
+        pic : mc6,
+        catagory : "mc",
+        Price : 405,
         discount : 10,
-        O_price: 80,
+        O_price: 450,
         clicked: false
     },
+    //Main Course Item End Here
+    //Starters Starts Here
     {
         id:6,
-        Name: "Burger",
-        pic : burger6,
-        catagory : "Burger",
-        Price : 30,
+        Name: "Masala Papad",
+        pic : st1,
+        catagory : "st",
+        Price : 144,
         discount : 10,
-        O_price: 80,
+        O_price: 160,
         clicked: false
     },
     {
         id:7,
-        Name: "Fanta",
-        pic : drink1,
-        catagory : "Drink",
-        Price : 60,
+        Name: "Aloo Chaat",
+        pic : st2,
+        catagory : "st",
+        Price : 117,
         discount : 10,
-        O_price: 80,
+        O_price: 130,
         clicked: false
     },
+    
     {
         id:8,
-        Name: "Burger",
-        pic : burger7,
-        catagory : "Burger",
+        Name: "Punjabi Samosa",
+        pic : st3,
+        catagory : "st",
         Price : 60,
         discount : 10,
         O_price: 80,
@@ -153,75 +158,147 @@ export const food =[
     },
     {
         id:9,
-        Name: "Pepsi",
-        pic : drink4,
-        catagory : "Drink",
-        Price : 60,
+        Name: "Papdi Chaat",
+        pic : st4,
+        catagory : "st",
+        Price : 71,
         discount : 10,
-        O_price: 80,
+        O_price: 79,
         clicked: false
     },
+    //starters ends here
+//sides starts here
     {
         id:10,
-        Name: "Sprite",
-        pic : drink3,
-        catagory : "Drink",
-        Price : 60,
+        Name: "Jeera Rice",
+        pic : si1,
+        catagory : "si",
+        Price : 162,
         discount : 10,
-        O_price: 80,
+        O_price: 180,
         clicked: false
     },
     {
         id:11,
-        Name: "Burger",
-        pic : burger4,
-        catagory : "Burger",
-        Price : 60,
+        Name: "Naan",
+        pic : si2,
+        catagory : "si",
+        Price : 27,
         discount : 10,
-        O_price: 80,
+        O_price: 30,
         clicked: false
     },
     {
         id:12,
-        Name: "Pizza",
-        pic : pizza2,
-        catagory : "Pizza",
-        Price : 60,
+        Name: "Roti",
+        pic : si3,
+        catagory : "si",
+        Price : 18,
         discount : 10,
-        O_price: 80,
+        O_price: 20,
         clicked: false
     },
     {
         id:13,
-        Name: "Pizza",
-        pic : pizza3,
-        catagory : "Pizza",
-        Price : 60,
-        discount : 10,
-        O_price: 80,
-        clicked: false
-    },
-    {
-        id:14,
-        Name: "Burger",
-        pic : burger3,
-        catagory : "Burger",
+        Name: "Keema Naan",
+        pic : si4,
+        catagory : "si",
         Price : 20,
         discount :5,
         O_price: 80,
         clicked: false
     },
     {
-        id:15,
-        Name: "sandwich",
-        pic : sandwich1,
-        catagory : "Sandwich",
+        id:14,
+        Name: "Baby Corn",
+        pic : si5,
+        catagory : "si",
         Price : 60,
         discount : 10,
         O_price: 80,
         clicked: false
     },
-    
+    //sides ends here
+    //desserts stars here
+    {
+        id:15,
+        Name: "Gulab Jamun",
+        pic : dessert1,
+        catagory : "de",
+        Price : 60,
+        discount : 10,
+        O_price: 80,
+        clicked: false
+    },
+    {
+        id:16,
+        Name: "kulfi",
+        pic : dessert2,
+        catagory : "de",
+        Price : 60,
+        discount : 10,
+        O_price: 80,
+        clicked: false
+    },
+    {
+        id:17,
+        Name: "kheer",
+        pic : dessert3,
+        catagory : "de",
+        Price : 60,
+        discount : 10,
+        O_price: 80,
+        clicked: false
+    },
+    {
+        id:18,
+        Name: "Rosogulla",
+        pic : dessert4,
+        catagory : "de",
+        Price : 60,
+        discount : 10,
+        O_price: 80,
+        clicked: false
+    },
+    //desserts end here
+    //drinks starts here
+    {
+        id:19,
+        Name: "Mocktail",
+        pic : drinks1,
+        catagory : "dr",
+        Price : 60,
+        discount : 10,
+        O_price: 80,
+        clicked: false
+    },{
+        id:20,
+        Name: "Beer",
+        pic : drinks2,
+        catagory : "dr",
+        Price : 60,
+        discount : 10,
+        O_price: 80,
+        clicked: false
+    },{
+        id:21,
+        Name: "Lassi",
+        pic : drinks3,
+        catagory : "dr",
+        Price : 60,
+        discount : 10,
+        O_price: 80,
+        clicked: false
+    },{
+        id:22,
+        Name: "Soda",
+        pic : drinks4,
+        catagory : "dr",
+        Price : 60,
+        discount : 10,
+        O_price: 80,
+        clicked: false
+    },
     
 ]
 

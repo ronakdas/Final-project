@@ -1,23 +1,20 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import { Outlet }  from "react-router-dom";
-import Footer from '../components/Footer';
-import { MdBoy, MdConstruction } from 'react-icons/md'
-import { LuConstruction } from 'react-icons/lu'
-function Layout() {
-    return ( 
+import React from 'react';
+import Navbar from '../components/Navbar'; // Adjust path if needed
+import Footer from '../components/Footer'; // Adjust path if needed
+
+function Layout({ children }) {
+    return (
         <div>
             <Navbar />
-            <Outlet />
+            <main>
+                {children}
+            </main>
             <Footer />
             <div className='credit'>
-                Copyright Ⓒ 2023 Foodie. All Rights Reserved.
-                <div>
-                Crafted by M.Abdullah 2023
-                </div>
+                Copyright Ⓒ 2023 Kahani Khane Ki. All Rights Reserved.
             </div>
         </div>
-    )
+    );
 }
 
-export default Layout
+export default Layout;

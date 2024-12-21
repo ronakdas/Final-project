@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 function BlogCards() {
     return (
         <div className='blog_Card_page'>
-            <p>Latest Blog Posts</p>
-            <h1>This is all About <span id='span'>Food</span></h1>
+           
+            <h1>Its all About <span id='span'>Kahani</span></h1>
             <div className='blog_cards_container'>
                 {blogcard.map((card,index)=>(
                     <div className='blog_card' key={card.id}>

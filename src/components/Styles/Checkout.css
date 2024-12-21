@@ -1,0 +1,103 @@
+/* Checkout.css */
+.checkout-container {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    align-items: center;
+    padding: 20px;
+    font-family: sans-serif; /* Use a consistent font */
+    max-width: 900px; /* Set a maximum width for larger screens */
+    margin: 20px auto; /* Center the container */
+}
+
+.checkout-sections {
+    display: flex;
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+    justify-content: space-between;
+    width: 100%;
+}
+
+.checkout-section {
+    flex: 1 1 45%; /* Each section takes up about half the width */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    min-width: 300px; /* Minimum width for each section */
+}
+
+.checkout-section h2 {
+    margin-top: 0; /* Remove default margin on h2 */
+}
+
+.checkout-section label {
+    display: block; /* Make labels stack above inputs */
+    margin-bottom: 5px;
+}
+
+.checkout-section input,
+.checkout-section select {
+    width: calc(100% - 12px); /* Full width minus padding and border */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.checkout-items {
+    margin-bottom: 20px;
+}
+
+.checkout-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.checkout-item img {
+    margin-right: 10px;
+}
+
+.item-details {
+    flex-grow: 1; /* Allow details to take up remaining space */
+}
+
+.checkout-total {
+    text-align: right; /* Align total to the right */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.checkout-container button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.checkout-container button:hover {
+    background-color: #45a049;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .checkout-sections {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    .checkout-section {
+        flex: 1 1 100%; /* Each section takes full width */
+        min-width: unset;
+    }
+}

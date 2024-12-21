@@ -101,11 +101,11 @@ function Shop() {
         <div className='item-card' key={item.id}>
             <div className='item-discount angle'>-{item.discount}%</div>
             <div className='item-pic'>
-                <img className="item-pic" src={item.pic} alt="burger" />
+                <img className="item-pic" src={item.pic} alt="Biriyani" />
             </div>
             <div className='item-info'>
                 <h2 className='name'>{item.Name}</h2>
-                <p className='price'>{item.Price}$ <span className='original-price'>{item.O_price}$</span></p>
+                <p className='price'>₹{item.Price} <span className='original-price'>₹{item.O_price}</span></p>
                 <button className='cart-button'
                     onClick={() => {
                         addToCart(item, cart, setCart);
@@ -128,37 +128,43 @@ function Shop() {
     return (
         <div className='shop-container'>
                 {showTransition && <Transition />}
-            <h1>Explore Our Items</h1>
+            <h1>Explore Our Menu</h1>
 
             <nav className='filter-nav'>
                 <Link className='item-type' to='.'>All</Link>
 
                 <Link
-                    className={`item-type pizza ${typeFilter === 'Pizza' ? 'selected' : ''}`}
-                    to='?catagory=Pizza'
+                    className={`item-type st ${typeFilter === 'st' ? 'selected' : ''}`}
+                    to='?catagory=st'
                 >
-                    Pizza
+                    Starters
                 </Link>
 
                 <Link
-                    className={`item-type pizza ${typeFilter === 'Drink' ? 'selected' : ''}`}
-                    to='?catagory=Drink'
+                    className={`item-type mc ${typeFilter === 'mc' ? 'selected' : ''}`}
+                    to='?catagory=mc'
                 >
-                    Drink
+                    Main Course
                 </Link>
 
                 <Link
-                    className={`item-type burger ${typeFilter === 'Burger' ? 'selected' : ''}`}
-                    to='?catagory=Burger'
+                    className={`item-type si ${typeFilter === 'si' ? 'selected' : ''}`}
+                    to='?catagory=si'
                 >
-                    Burger
+                    Sides
                 </Link>
 
                 <Link
-                    className={`item-type sandwich ${typeFilter === 'Sandwich' ? 'selected' : ''}`}
-                    to='?catagory=Sandwich'
+                    className={`item-type de ${typeFilter === 'de' ? 'selected' : ''}`}
+                    to='?catagory=de'
                 >
-                    Sandwich
+                    Desserts
+                </Link>
+                <Link
+                    className={`item-type dr ${typeFilter === 'dr' ? 'selected' : ''}`}
+                    to='?catagory=dr'
+                >
+                   Drinks
                 </Link>
 
             </nav>

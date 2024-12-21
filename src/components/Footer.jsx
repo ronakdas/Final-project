@@ -5,6 +5,7 @@ import { MdBoy, MdConstruction } from 'react-icons/md'
 import { deliveryboy, footer } from '../assets'
 import './Styles/Footer.css'
 import { FaFacebookSquare, FaInstagram, FaPinterest, FaTwitter } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 function Footer() {
     return (
         <div>
@@ -12,7 +13,7 @@ function Footer() {
 
                 <div className='footer-list list-1'>
                     <h2  className="logo">Kahani Khane Ki</h2>
-                    <p>Humare Har Khane Mein Alag Kahani</p>
+                    <p>Humare Har Khane Mein Alag Kahani Milegi</p>
                     <div className='icons'>
                         <h2><FaFacebookSquare /></h2>
                         <h2><FaInstagram /></h2>
@@ -47,10 +48,6 @@ function Footer() {
                     <img className='img-1' src={footer} />
                     <div className='footer-line'></div>
                 </div>
-
-                {/* <div className='credit'>
-                <MdConstruction />  Website Under Construction! <LuConstruction />
-                </div> */}
         </div>
     )
 }

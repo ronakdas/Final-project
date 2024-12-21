@@ -8,16 +8,16 @@ import { doc, setDoc, getDoc } from 'firebase/firestore';
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDCDgpkzfwrZAbxYNcrmLbU-NAl2w4iZoU",
-    authDomain: "foodie-b4377.firebaseapp.com",
-    projectId: "foodie-b4377",
-    storageBucket: "foodie-b4377.appspot.com",
-    messagingSenderId: "904827002782",
-    appId: "1:904827002782:web:e05290a80295b75761808f",
-    measurementId: "G-7TYDS2KT73"
+    apiKey: "AIzaSyDpzOtIdIKUsysQJE5eEynBJe20Sv2qFjU",
+  authDomain: "kahanikhaneki-c7937.firebaseapp.com",
+  projectId: "kahanikhaneki-c7937",
+  storageBucket: "kahanikhaneki-c7937.firebasestorage.app",
+  messagingSenderId: "511318078095",
+  appId: "1:511318078095:web:24783d318784f7752f76fa",
+  measurementId: "G-6050EKCH8S"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
@@ -28,29 +28,29 @@ export const db = getFirestore(app)
 export const storage = getStorage(app)
 
 
-// export const createUserDocument = async (user, userFirstName, userLastName) => {
-//     if (!user) return;
+export const createUserDocument = async (user, userFirstName, userLastName) => {
+   if (!user) return;
 
-//     const userRef = doc(db, 'users', user.uid);
-//     const snapshot = await getDoc(userRef);
+   const userRef = doc(db, 'users', user.uid);
+   const snapshot = await getDoc(userRef);
 
-//     if (!snapshot.exists()) {
-//         const { email } = user;
+    if (!snapshot.exists()) {
+       const { email } = user;
 
-//         try {
-//             await addDoc(userRef, {
-//                 email,
-//                 firstName: userFirstName,
-//                 lastName: userLastName,
-//             });
+       try {
+          await addDoc(userRef, {
+              email,
+               firstName: userFirstName,
+                 lastName: userLastName,
+            });
 
-//             await updateProfile(auth.currentUser, {
-//                 displayName: userFirstName, // Set the username
-//             });
+           await updateProfile(auth.currentUser, {
+                displayName: userFirstName, //Set the username
+            });
 
-//             console.log('User document created successfully');
-//         } catch (error) {
-//             console.error('Error creating user document:', error);
-//         }
-//     }
-// };
+            console.log('User document created successfully');
+        } catch (error) {
+            console.error('Error creating user document:', error);
+        }
+    }
+ };
